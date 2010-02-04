@@ -1,0 +1,59 @@
+.arrow_up{
+	background:url("../images/icons/arrow-090.png") top left no-repeat !important;
+}
+
+.arrow_up_stop{
+	background:url("../images/icons/arrow-stop-090.png") top left no-repeat !important;
+}
+
+.arrow_down{
+	background:url("../images/icons/arrow-270.png") top left no-repeat !important;
+}
+
+.arrow_down_stop{
+	background:url("../images/icons/arrow-stop-270.png") top left no-repeat !important;
+}
+
+.arrow_left{
+	background:url("../images/icons/arrow-180.png") top left no-repeat !important;
+}
+
+.arrow_right{
+	background:url("../images/icons/arrow.png") top left no-repeat !important;
+}
+
+.minus_circle_frame{
+	background:url("../images/icons/minus-circle-frame.png") top left no-repeat !important;
+}
+
+.plus_circle_frame{
+	background:url("../images/icons/plus-circle-frame.png") top left no-repeat !important;
+}
+
+.general_settings_large{
+	background:url("../images/icons/wrench_orange.png") top left no-repeat !important;
+}
+
+.products_large{
+	background:url("../images/icons/report.png") top left no-repeat !important;
+}
+
+.sales_large{
+	background:url("../images/icons/paste_plain.png") top left no-repeat !important;
+}
+
+.customers_large{
+	background:url("../images/icons/user_suit.png") top left no-repeat !important;
+}
+
+.users_large{
+	background:url("../images/icons/user_orange.png") top left no-repeat !important;
+}
+
+.contacts_large{
+	background:url("../images/icons/book_addresses.png") top left no-repeat !important;
+}
+
+.statistics_large{
+	background:url("../images/icons/chart_bar.png") top left no-repeat !important;
+}

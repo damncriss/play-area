@@ -1,0 +1,158 @@
+<script src="ext/adapter/ext/ext-base-debug.js" type="text/javascript" charset="utf-8"></script>
+<script src="ext/ext-all-debug.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="ext/resources/css/ext-all.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../JS/src/shared/components/TreeGrid/treegrid.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+<script src="../JS/src/shared/components/TreeGrid/TreeDragZone.js" type="text/javascript" charset="utf-8"></script>
+<script src="../JS/src/shared/components/TreeGrid/TreeDropZone.js" type="text/javascript" charset="utf-8"></script>
+
+
+<script src="../JS/src/shared/components/TreeGrid/TreeGrid.js" type="text/javascript" charset="utf-8"></script>
+<script src="../JS/src/shared/components/TreeGrid/TreeGridColumnResizer.js" type="text/javascript" charset="utf-8"></script>
+<script src="../JS/src/shared/components/TreeGrid/TreeGridColumns.js" type="text/javascript" charset="utf-8"></script>
+<script src="../JS/src/shared/components/TreeGrid/TreeGridLoader.js" type="text/javascript" charset="utf-8"></script>
+<script src="../JS/src/shared/components/TreeGrid/TreeGridNodeUI.js" type="text/javascript" charset="utf-8"></script>
+<script src="../JS/src/shared/components/TreeGrid/TreeGridSorter.js" type="text/javascript" charset="utf-8"></script>
+<script src="../JS/src/shared/components/ColumnTree/Ext.ux.ListLoader.js" type="text/javascript" charset="utf-8"></script>
+
+
+<style type="text/css">
+
+	tr.x-tree-drag-insert-above td{
+		border-top:1px solid #ff0000;
+	}
+	
+	tr.x-tree-drag-insert-below td{
+		border-bottom:1px solid #ff0000;
+	}
+	
+</style>
+
+
+<script language="javascript">
+
+data = [{
+	id:1,
+	parent_id:null,
+	name:'item 1',
+	data:'item 1'
+},{
+	id:2,
+	parent_id:null,
+	name:'item 2',
+	data:'item 2'
+},{
+	id:3,
+	parent_id:2,
+	name:'item 3 asd asd a sd a sd a sd  a s d a s d as da sd',
+	data:'item 3 asd asd a sd a sd a sd  a s d a s d as da sd'
+},{
+	id:4,
+	parent_id:2,
+	name:'item 4',
+	data:'item 4'
+},{
+	id:5,
+	parent_id:2,
+	name:'item 5',
+	data:'item 5'
+},{
+	id:6,
+	parent_id:1,
+	name:'item 6',
+	data:'item 6'
+},{
+	id:7,
+	parent_id:1,
+	name:'item 7',
+	data:'item 7',
+	collapsed:true
+}]
+
+
+
+	Ext.onReady(function(){
+		
+		
+		store = new Ext.data.JsonStore({
+    // store configs
+    autoDestroy: true,
+    storeId: 'myStore',
+    idProperty: 'id',
+    fields: ['name', 'data', {name:'id', type: 'int'}, {name:'parent_id', type:'int'}]
+});
+
+store.loadData(data)
+		
+		Ext.QuickTips.init();
+
+
+		tree = new Ext.ux.tree.TreeGrid({
+		width: 550,
+		height: 500,
+		rootVisible:false,
+		autoScroll:true,
+		title: 'Example Tasks',
+		renderTo:'test',
+		enableDD: true, 
+		appendOnly: false,
+		containerScroll:true,
+		columns:[{
+			header:'Name',
+			width:300,
+			dataIndex:'name',
+			editor: new Ext.form.TextField()
+		},{
+			header:'Data',
+			width:100,
+			dataIndex:'data'
+		}],
+		loader: new Ext.ux.ListLoader({
+			store:store
+
+		}),
+		
+		
+		initEvents : function(){
+			this.ddAppendOnly = false;
+        	Ext.ux.tree.TreeGrid.superclass.initEvents.call(this);
+    	},
+	    
+    
+		root: new Ext.tree.AsyncTreeNode({
+			text:'Tasks',
+			id:"0"
+		})/*,
+		
+		listeners:{
+			'resize':{
+				fn:function(){
+					
+					var bw = Ext.isBorderBox ? 2 : 2;
+					var treeWidth = this.body.getWidth()					
+					var widths = [(treeWidth*0.5), (treeWidth*0.5)];
+					
+					var totalWidth = 0;
+					for (var i = 0; i < widths.length; i++) {
+						totalWidth += widths[i];
+						Ext.select("div.x-tree-hd:nth-child(" + (i+1) + ")", false, "*TreeID*").setWidth(widths[i] - bw);
+						Ext.select("div.x-tree-col:nth-child(" + (i+1) + ")", false, "*TreeID*").setWidth(widths[i] - bw);
+						this.columns[i].width = widths[i];
+					}
+				//	this.headers.setWidth(totalWidth);
+					this.innerCt.setWidth(totalWidth);
+
+				}
+			}
+		}*/
+	});
+
+
+		
+	})
+
+</script>
+
+<div id='test' style="width:300px; margin:300px auto 0 auto">
+
+</div>

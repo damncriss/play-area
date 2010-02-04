@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  name: MyString
+  xtype_id: 
+  depth: 
+
+two:
+  name: MyString
+  xtype_id: 
+  depth: 
