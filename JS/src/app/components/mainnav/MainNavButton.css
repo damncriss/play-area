@@ -1,0 +1,56 @@
+.main-nav-button{
+	background:#fff;
+	-moz-border-radius:5px;
+	-webkit-border-radius: 5px;
+	width:46px;
+	height:46px;
+	border:1px solid rgba(0, 0, 0, 0.2);
+	-moz-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+	margin:10px 0;
+	background:#fff;
+}
+
+.main-nav-button button{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	border:none;
+	opacity:0;
+	cursor:pointer;
+}
+
+
+
+.main-nav-button .main-nav-icon{
+	width:32px;
+	height:32px;
+	top:8px;
+	left:7px;
+	position:relative;
+	zoom:200%;
+	opacity:0.8
+}
+
+.main-nav-button .main-nav-button-overlay{
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 20%, rgba(0,0,0,0.1));
+	-moz-border-radius:3px;
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+}
+
+.x-btn-over .main-nav-button-overlay{
+	background: -moz-linear-gradient(top, rgba(0,0,0,0) 20%, rgba(0,0,0,0));
+}
+
+.x-btn-click .main-nav-button-overlay, .x-btn-menu-active .main-nav-button-overlay{
+	background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 80%, rgba(0,0,0,0));
+}
+
+.x-btn-menu-active.main-nav-button, .x-btn-menu-click.main-nav-button{
+	-moz-box-shadow:inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+}

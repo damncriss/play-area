@@ -1,0 +1,176 @@
+<script language="javascript">
+	
+	if( typeof console == 'undefined' ){
+		console = {
+			log: function(){}
+		}
+	}
+	
+</script>
+
+<%= javascript_include_tag("/ext/adapter/ext/ext-base-debug.js") %>
+
+<%= javascript_include_tag("/ext/ext-all-debug.js") %>
+
+<%= javascript_include_tag("/admin/js/packageLoader.js") %>
+
+<%= stylesheet_link_tag('/ext/resources/css/ext-all.css') %>
+
+<%= stylesheet_link_tag('/admin/css/icons.css') %>
+
+
+<script language="javascript">
+Ext.onReady(function(){
+	
+	Ext.QuickTips.init();
+	
+	require("app.components.mainnav.mainnavbutton", function(){
+		
+		new Ext.Viewport({
+		layout:'border',
+		defaults:{
+			split:true,
+			collapsible:true,
+			collapseMode:'mini',
+		},
+		items:[{
+			region:'center',
+			layout:'card',
+			border:false,
+			header:false,
+			activeItem:0,
+			items:[{
+				layout:'border',
+				border:false,
+				
+				defaults:{
+					split:true
+				},
+				items:[{
+					xtype:'tabpanel',
+					activeItem:0,
+					region:'center',
+					items:[{
+						title:'Comenzi noi'
+					}]
+				},{
+					xtype:'tabpanel',
+					region:'south',
+					height:300,
+					activeItem:0,
+					items:[{
+						title:'Mesaje noi'
+					},{
+						title:'Review-uri noi'
+					},{
+						title:'Utilizatori noi'
+					}]
+				}]
+			}]
+		},{
+			region:'west',
+			width:60,
+			minWidth:60,
+			maxWidth:60,
+			header:false,
+			collapsible:true,
+			collapseMode:'mini',
+			layout:'vbox',
+			autoScroll:true,
+			layoutConfig:{
+				align:'center'
+			},
+			defaults:{
+				margins:'0 0 10 0',
+				xtype:'mainnavbutton',
+				scale:'large',
+				menuAlign:'tr?'
+			},
+			bodyStyle:{
+				padding:"10px 0"
+			},
+			frame:true,
+			items:[{
+				menu:[{
+					text:'Date de contact'
+				},{
+					text:'Termeni si conditii'
+				}],
+				iconCls:'general_settings_large',
+				tooltip:'Informatii generale'
+			},{
+				menu:[{
+					text:'Management categorii'
+				},{
+					text:'Management produse'
+				},{
+					text:'Promotii'
+				}],
+				iconCls:'products_large',
+				tooltip:'Management produse'
+			},{
+				menu:[{
+					text:'Comenzi'
+				},{
+					text:'Metode de livrare'
+				},{
+					text:'Modalitati de plata'
+				}],
+				iconCls:'sales_large',
+				tooltip:'Management vanzari'
+			},{
+				menu:[{
+					text:'Management clienti' // adrese de livrare, grupuri de clienti, 
+				}],
+				iconCls:'customers_large',
+				tooltip:'Management clienti'
+			},{
+				menu:[{
+					text:'Management utilizatori'
+				},{
+					text:'Drepturi/roluri'
+				}],
+				iconCls:'users_large',
+				tooltip:'Management utilizatori'
+			},{
+				iconCls:'contacts_large',
+				tooltip:'Management contacte'
+			},{
+				iconCls:'statistics_large',
+				tooltip:'Statistici'
+			}]
+		},{
+			border:false,
+			height:27,
+			header:false,
+			minHeight:27,
+			maxHeight:27,
+			region:'south',
+			tbar:[{
+				text:'xxx'
+			}]
+		},{
+			border:false,
+			height:27,
+			header:false,
+			minHeight:27,
+			maxHeight:27,
+			region:'north',
+			tbar:[{
+				text:'xxx'
+			}]
+
+		}]
+	})
+		
+		
+	})
+	
+	
+
+	
+})
+
+</script>
+
+<div id="test"></div>

@@ -1,0 +1,35 @@
+.arrow_up{
+	background:url(/admin/images/icons/arrow-090.png) top left no-repeat !important;
+}
+
+.arrow_up_stop{
+	background:url(/admin/images/icons/arrow-stop-090.png) top left no-repeat !important;
+}
+
+.arrow_down{
+	background:url(/admin/images/icons/arrow-270.png) top left no-repeat !important;
+}
+
+.arrow_down_stop{
+	background:url(/admin/images/icons/arrow-stop-270.png) top left no-repeat !important;
+}
+
+.arrow_left{
+	background:url(/admin/images/icons/arrow-180.png) top left no-repeat !important;
+}
+
+.arrow_right{
+	background:url(/admin/images/icons/arrow.png) top left no-repeat !important;
+}
+
+.minus_circle_frame{
+	background:url(/admin/images/icons/minus-circle-frame.png) top left no-repeat !important;
+}
+
+.plus_circle_frame{
+	background:url(/admin/images/icons/plus-circle-frame.png) top left no-repeat !important;
+}
+
+.refresh{
+	background:url(/admin/images/icons/arrow-circle-double.png) top left no-repeat !important;
+}

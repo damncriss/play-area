@@ -1,0 +1,130 @@
+<script src="ext/adapter/ext/ext-base-debug.js" type="text/javascript" charset="utf-8"></script>
+<script src="ext/ext-all-debug.js" type="text/javascript" charset="utf-8"></script>
+<link rel="stylesheet" href="ext/resources/css/ext-all.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="admin/css/icons.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+
+
+
+<script language="javascript">
+Ext.onReady(function(){
+	
+	Ext.QuickTips.init();
+	
+	new Ext.Viewport({
+		layout:'border',
+		defaults:{
+			split:true,
+			collapsible:true,
+			collapseMode:'mini',
+		},
+		items:[{
+			region:'center',
+			title:'center'
+		},{
+			region:'west',
+			width:80,
+			minWidth:80,
+			maxWidth:80,
+			header:false,
+			collapsible:true,
+			collapseMode:'mini',
+			layout:'vbox',
+			autoScroll:true,
+			layoutConfig:{
+				align:'center'
+			},
+			defaults:{
+				margins:'0 0 10 0',
+				xtype:'button',
+				scale:'large',
+				width:60,
+				menuAlign:'tr?'
+			},
+			bodyStyle:{
+				padding:"10px"
+			},
+			items:[{
+//				text:'Generale',
+				menu:[{
+					text:'Date de contact'
+				},{
+					text:'Termeni si conditii'
+				}],
+				iconCls:'general_settings_large',
+				tooltip:'Informatii generale'
+			},{
+//				text:'Produse',
+				menu:[{
+					text:'Management categorii'
+				},{
+					text:'Management produse'
+				},{
+					text:'Promotii'
+				}],
+				iconCls:'products_large',
+				tooltip:'Management produse'
+			},{
+//				text:'Vanzari',
+				menu:[{
+					text:'Comenzi'
+				},{
+					text:'Metode de livrare'
+				},{
+					text:'Modalitati de plata'
+				}],
+				iconCls:'sales_large',
+				tooltip:'Management vanzari'
+			},{
+//				text:'Clienti',
+				menu:[{
+					text:'Management clienti' // adrese de livrare, grupuri de clienti, 
+				}],
+				iconCls:'customers_large',
+				tooltip:'Management clienti'
+			},{
+//				text:'Utilizatori',
+				menu:[{
+					text:'Management utilizatori'
+				},{
+					text:'Drepturi/roluri'
+				}],
+				iconCls:'users_large',
+				tooltip:'Management utilizatori'
+			},{
+//				text:'Contacte',
+				iconCls:'contacts_large',
+				tooltip:'Management contacte'
+			},{
+//				text:'Statistici',
+				iconCls:'statistics_large',
+				tooltip:'Statistici'
+			}]
+		},{
+			border:false,
+			height:27,
+			header:false,
+			minHeight:27,
+			maxHeight:27,
+			region:'south',
+			tbar:[{
+				text:'xxx'
+			}]
+		},{
+			border:false,
+			height:27,
+			header:false,
+			minHeight:27,
+			maxHeight:27,
+			region:'north',
+			tbar:[{
+				text:'xxx'
+			}]
+
+		}]
+	})
+
+	
+})
+
+</script>
